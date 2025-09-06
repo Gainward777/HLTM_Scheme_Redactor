@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактор схем</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <div id="controls-panel">
+            <h1>Редактор Схемы</h1>
+            <div class="control-group">
+                <label for="file-loader">Загрузить HTML-схему:</label>
+                <input type="file" id="file-loader" accept=".html">
+            </div>
+
+            <!------------  НОВОЕ  –---------->
+            <div class="control-group">
+                <label>
+                    <input type="checkbox" id="toggle-grid">
+                    Показать сетку
+                </label>
+            </div>
+            <!------------  /НОВОЕ  –---------->
+
+            <div id="editor-controls" class="hidden">
+                <hr>
+                <h2>Параметры стиля</h2>
+                <div class="control-group">
+                    <label for="selector-dropdown">Редактировать элемент:</label>
+                    <select id="selector-dropdown"></select>
+                </div>
+                <div id="style-inputs">
+                    <!-- Динамические поля для стилей -->
+                </div>
+                <hr>
+                <button id="save-button">Сохранить как HTML</button>
+                <button id="save-png-button">Сохранить как PNG</button>
+                <button id="delete-button">Удалить выбранный</button>
+            </div>
+             <div id="info-box">
+                <p>Чтобы начать, загрузите HTML-файл со схемой, сгенерированной с помощью Cytoscape.</p>
+            </div>
+        </div>
+        <div id="graph-container"></div>
+    </div>
+
+    <script src="https://unpkg.com/cytoscape@3.27.0/dist/cytoscape.min.js"></script>
+    <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
+    <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
