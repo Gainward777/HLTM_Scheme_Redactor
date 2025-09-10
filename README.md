@@ -1,5 +1,5 @@
 ### HLTM Scheme Redactor — визуализация и редактирование схем PyTorch-моделей (обёртка над TorchView)
-
+![](Unet_0_1.png)
 Этот проект предоставляет два компонента, работающих вместе:
 
 - **Ноутбук `TVWrapper.ipynb`**: строит вычислительный граф вашей PyTorch‑модели с помощью TorchView и экспортирует его в самодостаточный HTML на базе Cytoscape.
@@ -193,4 +193,5 @@ Google Colab: в `TVWrapper.ipynb` уже есть ячейка «Required Insta
 
 - Проект основан на TorchView — «visualize PyTorch models»: [github.com/mert-kurttutan/torchview](https://github.com/mert-kurttutan/torchview). Лицензия TorchView: MIT.
 - Движок визуализации в редакторе — [Cytoscape.js](https://js.cytoscape.org/); раскладка — `dagre`.
+
 
